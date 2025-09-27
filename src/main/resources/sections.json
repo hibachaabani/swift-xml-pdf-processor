@@ -1,0 +1,29 @@
+{
+  "Sections": [
+    "Header",
+    "Body"
+  ],
+  "subSections": [
+    "Message",
+    "AppHdr",
+    "Document"
+  ],
+  "subSubSections": [
+    "Sender",
+    "Receiver",
+    "InterfaceInfo",
+    "NetworkInfo",
+    "GrpHdr",
+    "PmtId",
+    "PmtTpInf",
+    "Dbtr",
+    "DbtrAcct",
+    "DbtrAgt",
+    "CdtrAgt",
+    "Cdtr",
+    "CdtrAcct",
+    "RmtInf",
+    "Fr",
+    "To"
+  ]
+}

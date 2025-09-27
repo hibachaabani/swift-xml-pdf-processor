@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<saa:DataPDU xmlns:saa="urn:swift:saa:xsd:saa.2.0">
+    <saa:Header>
+        <saa:Message>
+            <saa:SenderReference>MSGID-0001</saa:SenderReference>
+            <saa:MessageIdentifier>pacs.008.001.08</saa:MessageIdentifier>
+            <saa:Format>MX</saa:Format>
+            <saa:SubFormat>Output</saa:SubFormat>
+            <saa:Sender>
+                <saa:DN>ou=xxx,o=AAAAUS33XXX,o=swift</saa:DN>
+                <saa:FullName>
+                    <saa:X1>AAAAUS33XXX</saa:X1>
+                </saa:FullName>
+            </saa:Sender>
+            <saa:Receiver>
+                <saa:DN>ou=xxx,o=BBBBGB22XXX,o=swift</saa:DN>
+                <saa:FullName>
+                    <saa:X1>BBBBGB22XXX</saa:X1>
+                </saa:FullName>
+            </saa:Receiver>
+            <saa:InterfaceInfo>
+                <saa:UserReference>INSTR-0002</saa:UserReference>
+                <saa:MessageContext>Original</saa:MessageContext>
+                <saa:MessageNature>Financial</saa:MessageNature>
+            </saa:InterfaceInfo>
+            <saa:NetworkInfo>
+                <saa:Priority>High</saa:Priority>
+                <saa:IsPossibleDuplicate>false</saa:IsPossibleDuplicate>
+                <saa:Service>swift.cbprplus.02</saa:Service>
+                <saa:SWIFTNetNetworkInfo>
+                    <saa:Reference>INSTR-0002</saa:Reference>
+                </saa:SWIFTNetNetworkInfo>
+            </saa:NetworkInfo>
+        </saa:Message>
+    </saa:Header>
+
+    <saa:Body>
+        <head:AppHdr xmlns:head="urn:iso:std:iso:20022:tech:xsd:head.001.001.02">
+            <head:Fr>
+                <head:FIId>
+                    <head:FinInstnId>
+                        <head:BICFI>AAAAUS33XXX</head:BICFI>
+                    </head:FinInstnId>
+                </head:FIId>
+            </head:Fr>
+            <head:To>
+                <head:FIId>
+                    <head:FinInstnId>
+                        <head:BICFI>BBBBGB22XXX</head:BICFI>
+                    </head:FinInstnId>
+                </head:FIId>
+            </head:To>
+            <head:BizMsgIdr>DEF/67890/2025-07-18</head:BizMsgIdr>
+            <head:MsgDefIdr>pacs.008.001.08</head:MsgDefIdr>
+            <head:BizSvc>swift.cbprplus.02</head:BizSvc>
+            <head:CreDt>2025-07-18T09:30:00+00:00</head:CreDt>
+        </head:AppHdr>
+
+        <mx:Document xmlns:mx="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.08">
+            <mx:FIToFICstmrCdtTrf>
+                <mx:GrpHdr>
+                    <mx:MsgId>MSGID-0002</mx:MsgId>
+                    <mx:CreDtTm>2025-07-18T09:00:00</mx:CreDtTm>
+                    <mx:NbOfTxs>2</mx:NbOfTxs>
+                    <mx:SttlmInf>
+                        <mx:SttlmMtd>CLRG</mx:SttlmMtd>
+                    </mx:SttlmInf>
+                    <mx:InstgAgt>
+                        <mx:FinInstnId>
+                            <mx:BICFI>AAAAUS33XXX</mx:BICFI>
+                        </mx:FinInstnId>
+                    </mx:InstgAgt>
+                    <mx:InstdAgt>
+                        <mx:FinInstnId>
+                            <mx:BICFI>BBBBGB22XXX</mx:BICFI>
+                        </mx:FinInstnId>
+                    </mx:InstdAgt>
+                </mx:GrpHdr>
+
+                <mx:CdtTrfTxInf>
+                    <mx:PmtId>
+                        <mx:InstrId>INSTR-0002A</mx:InstrId>
+                        <mx:EndToEndId>ETOE-0002A</mx:EndToEndId>
+                        <mx:TxId>TXID-0002A</mx:TxId>
+                    </mx:PmtId>
+                    <mx:PmtTpInf>
+                        <mx:InstrPrty>HIGH</mx:InstrPrty>
+                        <mx:SvcLvl>
+                            <mx:Cd>SEPA</mx:Cd>
+                        </mx:SvcLvl>
+                    </mx:PmtTpInf>
+                    <mx:IntrBkSttlmAmt Ccy="USD">5000.00</mx:IntrBkSttlmAmt>
+                    <mx:InstdAmt Ccy="USD">5000.00</mx:InstdAmt>
+                    <mx:ChrgBr>SHAR</mx:ChrgBr>
+                    <mx:Dbtr>
+                        <mx:Nm>Mary Johnson</mx:Nm>
+                        <mx:PstlAdr>
+                            <mx:Ctry>US</mx:Ctry>
+                            <mx:AdrLine>789 Market Street</mx:AdrLine>
+                            <mx:AdrLine>San Francisco, CA 94103</mx:AdrLine>
+                        </mx:PstlAdr>
+                        <mx:Id>
+                            <mx:OrgId>
+                                <mx:Othr>
+                                    <mx:Id>ID-MJ789</mx:Id>
+                                </mx:Othr>
+                            </mx:OrgId>
+                        </mx:Id>
+                    </mx:Dbtr>
+                    <mx:DbtrAcct>
+                        <mx:Id>
+                            <mx:IBAN>US0987654321098765432109</mx:IBAN>
+                        </mx:Id>
+                    </mx:DbtrAcct>
+                    <mx:DbtrAgt>
+                        <mx:FinInstnId>
+                            <mx:BICFI>AAAAUS33XXX</mx:BICFI>
+                        </mx:FinInstnId>
+                    </mx:DbtrAgt>
+                    <mx:CdtrAgt>
+                        <mx:FinInstnId>
+                            <mx:BICFI>BBBBGB22XXX</mx:BICFI>
+                        </mx:FinInstnId>
+                    </mx:CdtrAgt>
+                    <mx:Cdtr>
+                        <mx:Nm>Robert Wilson</mx:Nm>
+                        <mx:PstlAdr>
+                            <mx:Ctry>GB</mx:Ctry>
+                            <mx:AdrLine>321 Finance Ave</mx:AdrLine>
+                            <mx:AdrLine>London WC2N 5DU</mx:AdrLine>
+                        </mx:PstlAdr>
+                    </mx:Cdtr>
+                    <mx:CdtrAcct>
+                        <mx:Id>
+                            <mx:IBAN>GB34BARC56781234567890</mx:IBAN>
+                        </mx:Id>
+                    </mx:CdtrAcct>
+                    <mx:RmtInf>
+                        <mx:Ustrd>Consulting Fees July</mx:Ustrd>
+                    </mx:RmtInf>
+                </mx:CdtTrfTxInf>
+
+                <mx:CdtTrfTxInf>
+                    <mx:PmtId>
+                        <mx:InstrId>INSTR-0002B</mx:InstrId>
+                        <mx:EndToEndId>ETOE-0002B</mx:EndToEndId>
+                        <mx:TxId>TXID-0002B</mx:TxId>
+                    </mx:PmtId>
+                    <mx:PmtTpInf>
+                        <mx:InstrPrty>NORM</mx:InstrPrty>
+                        <mx:SvcLvl>
+                            <mx:Cd>SEPA</mx:Cd>
+                        </mx:SvcLvl>
+                    </mx:PmtTpInf>
+                    <mx:IntrBkSttlmAmt Ccy="EUR">250.00</mx:IntrBkSttlmAmt>
+                    <mx:InstdAmt Ccy="EUR">250.00</mx:InstdAmt>
+                    <mx:ChrgBr>DEBT</mx:ChrgBr>
+                    <mx:Dbtr>
+                        <mx:Nm>Alice Brown</mx:Nm>
+                        <mx:PstlAdr>
+                            <mx:Ctry>DE</mx:Ctry>
+                            <mx:AdrLine>12 Main Strasse</mx:AdrLine>
+                            <mx:AdrLine>Berlin 10115</mx:AdrLine>
+                        </mx:PstlAdr>
+                        <mx:Id>
+                            <mx:OrgId>
+                                <mx:Othr>
+                                    <mx:Id>ID-AB456</mx:Id>
+                                </mx:Othr>
+                            </mx:OrgId>
+                        </mx:Id>
+                    </mx:Dbtr>
+                    <mx:DbtrAcct>
+                        <mx:Id>
+                            <mx:IBAN>DE89370400440532013000</mx:IBAN>
+                        </mx:Id>
+                    </mx:DbtrAcct>
+                    <mx:DbtrAgt>
+                        <mx:FinInstnId>
+                            <mx:BICFI>DEUTDEFFXXX</mx:BICFI>
+                        </mx:FinInstnId>
+                    </mx:DbtrAgt>
+                    <mx:CdtrAgt>
+                        <mx:FinInstnId>
+                            <mx:BICFI>BBBBGB22XXX</mx:BICFI>
+                        </mx:FinInstnId>
+                    </mx:CdtrAgt>
+                    <mx:Cdtr>
+                        <mx:Nm>Global Services Ltd</mx:Nm>
+                        <mx:PstlAdr>
+                            <mx:Ctry>GB</mx:Ctry>
+                            <mx:AdrLine>55 Queen Road</mx:AdrLine>
+                            <mx:AdrLine>London SW1A 2AA</mx:AdrLine>
+                        </mx:PstlAdr>
+                    </mx:Cdtr>
+                    <mx:CdtrAcct>
+                        <mx:Id>
+                            <mx:IBAN>GB29NWBK60161331926819</mx:IBAN>
+                        </mx:Id>
+                    </mx:CdtrAcct>
+                    <mx:RmtInf>
+                        <mx:Ustrd>Subscription Payment</mx:Ustrd>
+                    </mx:RmtInf>
+                </mx:CdtTrfTxInf>
+            </mx:FIToFICstmrCdtTrf>
+        </mx:Document>
+    </saa:Body>
+</saa:DataPDU>
