@@ -69,17 +69,20 @@ SubFormat : Output
 Sender : AAAAUS33XXX
 Receiver : BBBBGB22XXX
 ```
-...
+
 
 ---
 
 ## Structure du projet :
+```
 src/
  └── main/
      ├── java/
      │    └── com/hiba/       # Packages Java
      └── resources/           # XML, JSON et fichiers properties
-output/                       # PDF généré
+output/                    # PDF généré
+
+```
 
 ---
 
