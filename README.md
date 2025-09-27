@@ -55,8 +55,11 @@ Le système est développé en **Java** avec **Spring Boot** pour la structure b
         </saa:Message>
     </saa:Header>
 </saa:DataPDU>
+```
 
-## PDF généré (exemple simplifié) :
+---
+
+## PDF généré (exemple simplifié) 
 ```text
 PACS.008.001.08
 Sender Reference : MSGID-0001
@@ -65,10 +68,10 @@ SubFormat : Output
 
 Sender : AAAAUS33XXX
 Receiver : BBBBGB22XXX
-
+```
 ...
 
-
+---
 
 ## Structure du projet :
 src/
@@ -76,6 +79,8 @@ src/
      ├── java/com/hiba/        # Packages Java
      └── resources/            # XML, JSON et fichiers properties
 output/                        # PDF généré
+
+---
 
 ## Installation et utilisation:
 
@@ -96,6 +101,8 @@ git clone git@github.com:hibachaabani/swift-xml-pdf-processor.git
 4. Lancer le projet (main class : XmlToPdfGenerator) pour générer le PDF.
 
 5. Le PDF sera créé dans le dossier output/ du projet avec le nom user_friendly.pdf.
+
+---
 
 ## Licence
 
