@@ -86,7 +86,7 @@ output/                        # PDF généré
 
 1. Cloner le dépôt :
 
-git clone git@github.com:hibachaabani/swift-xml-pdf-processor.git
+git clone https://github.com/hibachaabani/swift-xml-pdf-processor.git
 
 2. Importer le projet dans IntelliJ comme projet Maven.
 
