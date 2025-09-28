@@ -30,7 +30,7 @@ Le système est développé en **Java** avec **Spring Boot** pour la structure b
 
 ## Exemple
 
-**  XML SWIFT PACS.008 :**
+ Message SWIFT PACS.008 :
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <saa:DataPDU xmlns:saa="urn:swift:saa:xsd:saa.2.0">
